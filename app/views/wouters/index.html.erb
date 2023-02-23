@@ -1,0 +1,11 @@
+<h1>Wouter Web</h1>
+
+<ul>
+  <% @wouters.each do |wouter| %>
+    <li>
+      <%= link_to "#{wouter.number} - #{wouter.first_name} #{wouter.last_name}", wouter %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Wouter", new_wouter_path %>

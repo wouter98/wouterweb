@@ -1,0 +1,10 @@
+<h1><%= @wouter.number %></h1>
+<h2><%= "#{@wouter.first_name} #{@wouter.last_name}" %></h2>
+
+<ul>
+  <li><%= link_to "Edit", edit_wouter_path(@wouter) %></li>
+  <li><%= link_to "Destroy", wouter_path(@wouter), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+</ul>

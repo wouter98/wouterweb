@@ -1,0 +1,26 @@
+<%= form_with model: wouter do |form| %>
+  <div>
+    <label for="wouter_first_name">First Name</label><br>
+    <input type="text" name="wouter[first_name]" id="wouter_first_name" value="Wouter" readonly>
+  </div>
+
+  <div>
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name %>
+    <% wouter.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :number %><br>
+    <%= form.telephone_field :number %>
+    <% wouter.errors.full_messages_for(:number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
